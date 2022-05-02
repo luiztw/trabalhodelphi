@@ -1,0 +1,44 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls, Vcl.ExtCtrls;
+
+type
+  Tfrm_principal = class(TForm)
+    barra: TProgressBar;
+    Timer1: TTimer;
+    procedure Timer1Timer(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_principal: Tfrm_principal;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit2, Unit3, Unit4, unit5, unit6;
+
+
+
+procedure Tfrm_principal.Timer1Timer(Sender: TObject);
+begin
+barra.Position:= barra.position + 5;
+
+if barra.Position = 100  then
+begin
+ frm_principal.Visible:=false;
+  frm_tela.Visible:=true;
+
+
+end;
+
+end;
+end.

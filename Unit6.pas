@@ -20,8 +20,15 @@ type
     Image3: TImage;
     Image4: TImage;
     Image5: TImage;
+    btn_saibamais: TButton;
+    lb_porcentagemD: TLabel;
+    lb_porcentagemI: TLabel;
+    lb_porcentagemS: TLabel;
+    lb_porcentagemC: TLabel;
     procedure Timer1Timer(Sender: TObject);
     procedure btn_fecharClick(Sender: TObject);
+    procedure btn_saibamaisClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,6 +41,10 @@ var
   Aresultado:integer;
   Bresultado:integer;
   Cresultado:integer;
+  labelA:string;
+  labelB:string;
+  labelC:string;
+  labelD:string;
 
 implementation
 
@@ -60,6 +71,48 @@ barra3.Position:= Cresultado;
 barra4.Position:= Dresultado;
 
 
+end;
+
+procedure Tfrm_tela5.btn_saibamaisClick(Sender: TObject);
+begin
+if (Aresultado > Bresultado) and (Aresultado>Cresultado) and (Aresultado > Dresultado) then
+
+begin
+  frm_tela5.Visible:=false;
+  frm_D.Visible:=true;
+end;
+
+if (Bresultado > Aresultado) and (Bresultado>Cresultado) and (Bresultado > Dresultado) then
+
+begin
+  frm_tela5.Visible:=false;
+  frm_I.Visible:=true;
+end;
+
+if (Cresultado > Aresultado) and (Cresultado>Bresultado) and (Cresultado > Dresultado) then
+
+begin
+  frm_tela5.Visible:=false;
+  frm_S.Visible:=true;
+end;
+
+if (Dresultado > Aresultado) and (Dresultado>Bresultado) and (Dresultado > Cresultado) then
+
+begin
+  frm_tela5.Visible:=false;
+  frm_C.Visible:=true;
+end;
+
+end;
+
+
+
+procedure Tfrm_tela5.FormShow(Sender: TObject);
+begin
+lb_porcentagemD.Caption:= ( floatToStr(((Aresultado) * 150) /100)) + '%';
+lb_porcentagemI.Caption:= ( floatToStr(((Bresultado) * 150) /100)) + '%';
+lb_porcentagemS.Caption:= ( floatToStr(((Cresultado) * 150) /100)) + '%';
+lb_porcentagemC.Caption:= ( floatToStr(((Dresultado) * 150) /100)) + '%';
 
 end;
 

@@ -30,6 +30,7 @@ type
     Image1: TImage;
     procedure btn_proximaClick(Sender: TObject);
     procedure btn_fecharClick(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -62,33 +63,30 @@ procedure Tfrm_tela3.btn_proximaClick(Sender: TObject);
 
 begin
 
-frm_tela3.Visible:= false;
-frm_tela4.Visible:= true;
-
 
 a1:= StrToInt(cb_1.Text);
 a2:= StrToInt(cb_2.Text);
 a3:= StrToInt(cb_3.Text);
 a4:= StrToInt(cb_4.Text);
-//a5:= StrToInt(cb_5.Text);
+
 
 b1 := StrToInt(cb_6.Text);
 b2 := StrToInt(cb_7.Text);
 b3 := StrToInt(cb_8.Text);
 b4 := StrToInt(cb_9.Text);
-//b5 := StrToInt(cb_10.Text);
+
 
 c1 := StrToInt(cb_11.Text);
 c2 := StrToInt(cb_12.Text);
 c3 := StrToInt(cb_13.Text);
 c4 := StrToInt(cb_14.Text);
-//c5 := StrToInt(cb_15.Text);
+
 
 d1 := StrToInt(cb_16.Text);
 d2 := StrToInt(cb_17.Text);
 d3 := StrToInt(cb_18.Text);
 d4:= StrToInt(cb_19.Text);
-//d5 := StrToInt(cb_20.Text);
+
 
 A3total:= a1 + a2 + a3 + a4 ;
 B3total:= b1 + b2 + b3 + b4 ;
@@ -107,11 +105,14 @@ if (Strtoint (cb_1.Text) = Strtoint (cb_6.Text))  or
     (Strtoint (cb_16.Text) = Strtoint (cb_1.Text)) or
     (Strtoint (cb_16.Text) = Strtoint (cb_6.Text)) or
     (Strtoint (cb_16.Text) = Strtoint (cb_11.Text))  then
+
+ begin
 showmessage ('ERRO. Revise suas respostas da primeira linha  ');
+ end
 
 
 
-if (Strtoint (cb_2.Text) = Strtoint (cb_7.Text)) or
+ else if (Strtoint (cb_2.Text) = Strtoint (cb_7.Text)) or
 (Strtoint (cb_2.Text) = Strtoint (cb_12.Text)) or
 (Strtoint (cb_2.Text) = Strtoint (cb_17.Text))  or
 (Strtoint (cb_7.Text) = Strtoint (cb_2.Text)) or
@@ -123,10 +124,13 @@ if (Strtoint (cb_2.Text) = Strtoint (cb_7.Text)) or
 (Strtoint (cb_17.Text) = Strtoint (cb_2.Text)) or
 (Strtoint (cb_17.Text) = Strtoint (cb_7.Text)) or
 (Strtoint (cb_17.Text) = Strtoint (cb_12.Text))  then
+
+begin
 showmessage ('ERRO. Revise suas respostas da segunda linha ');
+end
 
 
-if (Strtoint (cb_3.Text) = Strtoint (cb_8.Text)) or
+else if (Strtoint (cb_3.Text) = Strtoint (cb_8.Text)) or
 ( Strtoint (cb_3.Text) = Strtoint (cb_13.Text)) or
 (Strtoint (cb_3.Text) = Strtoint (cb_18.Text)) or
 (Strtoint (cb_13.Text) = Strtoint (cb_3.Text)) or
@@ -138,9 +142,12 @@ if (Strtoint (cb_3.Text) = Strtoint (cb_8.Text)) or
 (Strtoint (cb_18.Text) = Strtoint (cb_13.Text)) or
  (Strtoint (cb_18.Text) = Strtoint (cb_3.Text)) or
   (Strtoint (cb_18.Text) = Strtoint (cb_8.Text)) then
-showmessage ('ERRO. Revise suas respostas da terceira linha ');
 
-if(Strtoint (cb_4.Text) = Strtoint (cb_9.Text))or
+  begin
+showmessage ('ERRO. Revise suas respostas da terceira linha ');
+  end
+
+else if(Strtoint (cb_4.Text) = Strtoint (cb_9.Text))or
 (Strtoint (cb_4.Text) = Strtoint (cb_14.Text)) or
 (Strtoint (cb_4.Text) = Strtoint (cb_19.Text))  or
 (Strtoint (cb_9.Text) = Strtoint (cb_4.Text))  or
@@ -152,13 +159,17 @@ if(Strtoint (cb_4.Text) = Strtoint (cb_9.Text))or
  (Strtoint (cb_19.Text) = Strtoint (cb_4.Text)) or
  (Strtoint (cb_19.Text) = Strtoint (cb_14.Text)) or
  (Strtoint (cb_19.Text) = Strtoint (cb_9.Text)) then
-showmessage ('ERRO. Revise suas respostas da quarta linha ');
+
+ begin
+showmessage ('ERRO. Revise suas respostas da quarta linha ') ;
+ end
 
 
-
-
-
-
+else
+    begin
+frm_tela3.Visible:= false;
+frm_tela4.Visible:= true;
+    end;
 
 end;
 

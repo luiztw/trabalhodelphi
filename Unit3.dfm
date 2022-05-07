@@ -8101,7 +8101,7 @@ object frm_tela2: Tfrm_tela2
       44AE426082}
   end
   object cb_1: TComboBox
-    Left = 344
+    Left = 368
     Top = 96
     Width = 73
     Height = 21
@@ -8269,7 +8269,7 @@ object frm_tela2: Tfrm_tela2
       '4')
   end
   object cb_18: TComboBox
-    Left = 848
+    Left = 840
     Top = 336
     Width = 73
     Height = 21
@@ -8281,7 +8281,7 @@ object frm_tela2: Tfrm_tela2
       '4')
   end
   object cb_19: TComboBox
-    Left = 848
+    Left = 840
     Top = 472
     Width = 73
     Height = 21

@@ -12,7 +12,6 @@ type
     barra: TProgressBar;
     Timer1: TTimer;
     Image1: TImage;
-    botao: TButton;
     procedure Timer1Timer(Sender: TObject);
     procedure botaoClick(Sender: TObject);
   private
@@ -23,6 +22,7 @@ type
 
 var
   frm_principal: Tfrm_principal;
+    abriu: boolean = false;
 
 implementation
 
@@ -39,15 +39,15 @@ frm_D.Visible:=true;
 end;
 
 procedure Tfrm_principal.Timer1Timer(Sender: TObject);
+
 begin
 barra.Position:= barra.position + 5;
 
-if barra.Position = 100  then
+if (barra.Position = 100) and (abriu = false) then
 begin
- frm_principal.Visible:=false;
+  abriu := true;
+  frm_principal.Visible:=false;
   frm_tela.Visible:=true;
-
-
 end;
 
 end;

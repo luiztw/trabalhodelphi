@@ -10081,19 +10081,10 @@ object frm_principal: Tfrm_principal
     Height = 25
     TabOrder = 0
   end
-  object botao: TButton
-    Left = 472
-    Top = 328
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
-    TabOrder = 1
-    OnClick = botaoClick
-  end
   object Timer1: TTimer
     Interval = 100
     OnTimer = Timer1Timer
-    Left = 824
-    Top = 536
+    Left = 8
+    Top = 600
   end
 end

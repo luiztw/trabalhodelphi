@@ -2,14 +2,15 @@ object frm_tela5: Tfrm_tela5
   Left = 0
   Top = 0
   Caption = 'tela5'
-  ClientHeight = 650
-  ClientWidth = 1002
+  ClientHeight = 645
+  ClientWidth = 999
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 15
   object Image1: TImage
@@ -4353,6 +4354,58 @@ object frm_tela5: Tfrm_tela5
       00C4205800C4205800C4205800C4205800C4205800C4205800C4205800C4F87F
       F29954960CA7A6C50000000049454E44AE426082}
   end
+  object lb_porcentagemD: TLabel
+    Left = 184
+    Top = 591
+    Width = 95
+    Height = 17
+    Caption = 'PORCENTAGEM'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lb_porcentagemI: TLabel
+    Left = 368
+    Top = 591
+    Width = 95
+    Height = 17
+    Caption = 'PORCENTAGEM'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lb_porcentagemS: TLabel
+    Left = 544
+    Top = 591
+    Width = 95
+    Height = 17
+    Caption = 'PORCENTAGEM'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lb_porcentagemC: TLabel
+    Left = 744
+    Top = 591
+    Width = 95
+    Height = 17
+    Caption = 'PORCENTAGEM'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object barra1: TProgressBar
     Left = 184
     Top = 224
@@ -4393,6 +4446,15 @@ object frm_tela5: Tfrm_tela5
     Caption = 'FECHAR'
     TabOrder = 4
     OnClick = btn_fecharClick
+  end
+  object btn_saibamais: TButton
+    Left = 456
+    Top = 615
+    Width = 75
+    Height = 25
+    Caption = 'Saiba mais...'
+    TabOrder = 5
+    OnClick = btn_saibamaisClick
   end
   object Timer1: TTimer
     Interval = 100
